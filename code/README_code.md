@@ -64,3 +64,4 @@ All figure scripts in `figure/` read only the CSV/JSON outputs in `data/` (and `
 - `counterfactual.py` (extended): order-free (Shapley) split of the spread reduction between coordinate and solar term, also on the pooled samples; writes `data/step4/zonal_cutoff.csv` when the PARMA cutoff file is present and reads it otherwise, so the step reruns from the released files.
 - `joint_sensitivity.py` (extended): k drawn over the anchor above 10 MeV (1.23 to 1.37), appended after the earlier draws so their results are unchanged.
 - `make_supp_tables.py`: Table SXI (uncertainty budget); Table SV with k = 1.07, 1.23, 1.37 and neutron-only rows.
+- `device_flat.py` (Step 8 round 10): device counts of `device_r7.py` with the flat design value 6000 and with the floor (larger of 6000 and the scaled curves) instead of the scaled curves; no PARMA run.

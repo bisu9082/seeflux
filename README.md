@@ -10,7 +10,7 @@ The analysis compares the simplified atmospheric neutron flux estimates used in 
 
 | Path | What it holds |
 |---|---|
-| `code/` | Every analysis step. `analysis_main.py` runs the full pipeline (32 steps) in order and writes `data/experiment_summary.json`. |
+| `code/` | Every analysis step. `analysis_main.py` runs the full pipeline (33 steps) in order and writes `data/experiment_summary.json`. |
 | `code/seeflux_driver.cpp` | Small C++ driver that calls PARMA 4.10 for integral fluxes, Weibull folds, band fluxes and protons. The PARMA source is **not** included (see below). |
 | `code/README_code.md` | Step-by-step description of the scripts and their outputs. |
 | `data/step4/` | All outputs that the tables, figures and numbers of the paper are read from: PARMA reference grid, evaluation sets, audits, routes, device folds, robustness checks. |
@@ -18,7 +18,7 @@ The analysis compares the simplified atmospheric neutron flux estimates used in 
 | `data/refs/` | Values transcribed from published tables (Cecchetto et al. 2019, Table 2 and 3; Gordon et al. 2004, Table A-I). |
 | `data/geo/` | Natural Earth coastlines (public domain) for the route map. |
 | `figure/` | Scripts that draw the figures from `data/step4`. |
-| `data/a1_cleanroom_compare.csv` | Reproducibility check: a full rerun in a fresh copy reproduced all 62 outputs of `data/step4` bit for bit; the later steps `pooled_spread.py`, `floor_neutron.py` and the extended `counterfactual.py` were rerun from the released files alone and reproduce their outputs bit for bit. |
+| `data/a1_cleanroom_compare.csv` | Reproducibility check: a full rerun in a fresh copy reproduced all 62 outputs of `data/step4` bit for bit; the later steps `pooled_spread.py`, `floor_neutron.py`, `device_flat.py` and the extended `counterfactual.py` were rerun from the released files alone and reproduce their outputs bit for bit. |
 
 ## Requirements
 
