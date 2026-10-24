@@ -10,7 +10,7 @@ OUT = ROOT / "latex/tables"; OUT.mkdir(parents=True, exist_ok=True)
 NAME = {"S1_IEC": "IEC 62396-1 curves, 5600", "S1_IEC6000": "IEC 62396-1 curves, 6000", "S1_IEC_alt45": "IEC 62396-1 altitude curve, 45$^{\\circ}$", "FLAT5600": "Flat 5600",
         "FLAT6000": "Flat 6000", "S2_JESD_mid": "JESD89, mid-level solar", "S2_JESD_lin": "JESD89, date-matched solar$^{a}$",
         "S4_AN_ABB": "AN4589, ABB", "S4b_AN_CoolCAD": "AN4589, CoolCAD", "FORMULA": "Surrogate, (1)"}
-pct = lambda x: "%d" % round(100 * x)
+pct = lambda x: ("%.1f" % (100 * x)) if 0 < 100 * x < 1 else ("%d" % int(100 * x + 0.5))   # half up; one decimal below 1%
 f2 = lambda x: "%.2f" % x
 
 # Table I: audit on the independent set, cruise 9-12.5 km

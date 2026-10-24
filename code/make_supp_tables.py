@@ -168,8 +168,8 @@ write("supp_subsets.tex", "\n".join([
 
 # Table SX: device sensitivity on the routes at FL370 (code/device_r8.py), Step 8 round 8 (M5)
 DR = pd.read_csv(ROOT / "data/step4/device_r8.csv")
-COLS = [("IEC_s200_over_ref", "$\\sigma_{200}$"), ("IEC_s230_over_ref", "$\\sigma_{230}$"), ("IEC_sp400_over_ref", "$\\bar\\sigma_{\\mathrm{sp}}$, 400"),
-        ("IEC_sp800_over_ref", "$\\bar\\sigma_{\\mathrm{sp}}$, 800"), ("IEC_sp1e5_over_ref", "$\\bar\\sigma_{\\mathrm{sp}}$, no limit")]
+COLS = [("IEC_s200_over_ref", "$\\sigma_{200}$"), ("IEC_s230_over_ref", "$\\sigma_{230}$"), ("IEC_sp400_over_ref", "$\\bar\\sigma_{\\mathrm{sp}}$, 316"),
+        ("IEC_sp800_over_ref", "$\\bar\\sigma_{\\mathrm{sp}}$, 681"), ("IEC_sp1e5_over_ref", "$\\bar\\sigma_{\\mathrm{sp}}$, no limit")]
 rows = []
 for resp, g in DR.groupby("response", sort=False):
     rows.append(resp.replace("E_th", "$E_{\\mathrm{th}}$").replace("0.23-3", "0.23--3") + " & " +
@@ -215,5 +215,5 @@ write("supp_budget.tex", "\n".join([
     r"\label{tab:s_budget}", r"\setlength{\tabcolsep}{2.5pt}", r"\footnotesize", r"\begin{tabular}{p{3.3cm}ccc}", r"\toprule",
     r"Source & \shortstack{IEC below\\one (\%)} & \shortstack{IEC\\P95/P5} & \shortstack{JESD89\\P95/P5} \\", r"\midrule", *rows,
     r"\bottomrule", r"\end{tabular}",
-    r"\par\smallskip\footnotesize $^{a}$Share below one at the stated ends of $k$; the lower end comes from a sea-level comparison with the JESD89B reference, the upper end from the ER-2 flight at 11.9~km in free air. $^{b}$Against 2.66 and 1.42 with the PARMA total at the same conditions. $^{c}$2.5th to 97.5th percentiles of the draws; their width follows from the assumed distribution of $k$.",
+    r"\par\smallskip\footnotesize $^{a}$Share below one at the stated ends of $k$; the lower end comes from a sea-level comparison with the JESD89B reference, the upper end, 1.37, rounds the largest ER-2 total-fluence ratio (1.365, 20.3~km, free air); the free-air anchor above 10~MeV at 11.9~km is 1.36. $^{b}$Against 2.66 and 1.42 with the PARMA total at the same conditions. $^{c}$2.5th to 97.5th percentiles of the draws; their width follows from the assumed distribution of $k$.",
     r"\end{table}", ""]))
