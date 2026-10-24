@@ -20,6 +20,14 @@ for m in ["S1_IEC", "S1_IEC6000", "S1_IEC_alt45", "FLAT5600", "FLAT6000", "S2_JE
     v = T.loc[m]
     rows.append(f"{NAME[m]} & $n$ & {f2(v['median'])} & {f2(v.p05)}--{f2(v.p95)} & {pct(v['out30_k1.0'])} & {pct(v.out2)} & "
                 f"{pct(v['below1_k0.88'])} & {pct(v['below1_k1.0'])} & {pct(v['below1_k1.37'])} & {f2(v.spread)} \\\\")
+# Step 8 round 9 (F2): the 6000 floor on the neutron basis the memorandum states, in the n block
+import numpy as _np
+_Vn = pd.read_csv(ROOT / "data/step4/validation_direct.csv"); _Cn = _Vn[_Vn.alt_km.between(9.0, 12.5)]
+_rn = (_np.maximum(6000.0, _Cn.S1_IEC * 6000 / 5600) / _Cn.PARMA).values
+_a, _b = _np.percentile(_rn, [5, 95])
+rows.insert(5, f"Larger of 6000 and curves & $n$ & {f2(_np.median(_rn))} & {f2(_a)}--{f2(_b)} & {pct(_np.mean((_rn > 1.3) | (_rn < 1 / 1.3)))} & "
+               f"{pct(_np.mean((_rn > 2) | (_rn < 0.5)))} & {pct(_np.mean(0.88 * _rn < 1))} & {pct(_np.mean(_rn < 1))} & "
+               f"{pct(_np.mean(1.37 * _rn < 1))} & {f2(_b / _a)} \\\\")
 # Step 8 round 8 (M3): the 6000 value against neutrons + protons, flat, scaled, and as a floor under the scaled curves
 import numpy as _np
 _V = pd.read_csv(ROOT / "data/step4/validation_direct.csv"); _P = pd.read_csv(ROOT / "data/step4/r7_points_np.csv")
@@ -140,5 +148,5 @@ Coefficient & Value & 95\% interval \\
 (OUT / "tab_coef.tex").write_text(t4, encoding="utf-8")
 for p in OUT.glob("*.tex"):  # em dash rule: no '---' and no U+2014 in any generated table
     txt = p.read_text(encoding="utf-8")
-    assert "---" not in txt and "—" not in txt, f"em dash in {p.name}"
+    assert "---" not in txt and "\u2014" not in txt, f"em dash in {p.name}"
 print("tables written:", [p.name for p in OUT.glob("*.tex")])

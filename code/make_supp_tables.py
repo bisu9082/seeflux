@@ -7,7 +7,7 @@ ML, TAB = ROOT / "data/step_ml", ROOT / "latex/tables"
 
 
 def write(name, body):
-    assert "—" not in body and "---" not in body, name
+    assert "\u2014" not in body and "---" not in body, name
     (TAB / name).write_text(body, encoding="utf-8", newline="\n")
     print("wrote", name)
 
@@ -98,13 +98,20 @@ LAB = {"peak n+p above 6000 somewhere on the route, FL370 (max over routes: ICN-
        "FL370 value (7498) at or above 6000": "Bounding value $\\ge$ 6000, FL370",
        "FL410 value (9427) at or above 6000": "Bounding value $\\ge$ 6000, FL410"}
 yn = lambda b: "yes" if b else "no"
-rows = [f"{LAB[r.finding]} & {r.k_star:.2f} & {yn(r.k_star > 1.0748)} & {yn(r.k_star > 1.2838)} & {yn(r.k_star > 1.37)} \\\\"
+rows = [f"{LAB[r.finding]} & {r.k_star:.2f} & {yn(r.k_star > 1.0748)} & {yn(r.k_star > 1.23)} & {yn(r.k_star > 1.37)} \\\\"
         for r in KB.itertuples() if r.finding in LAB]
+# Step 8 round 9 (F2): the same findings on the neutron basis of the memorandum (code/floor_neutron.py)
+FN = json.load(open(ROOT / "data/step4/floor_neutron.json"))
+rows.append(r"\midrule")
+for lab, ks in (("6000 exceeded at peak, FL370", FN["route_peak_kstar"]["FL370"]["n"]), ("6000 exceeded at peak, FL390", FN["route_peak_kstar"]["FL390"]["n"]),
+                ("6000 exceeded at peak, FL410", FN["route_peak_kstar"]["FL410"]["n"]), ("Bounding value $\\ge$ 6000, FL370", FN["bounding"]["FL370"]["kstar_n"]),
+                ("Bounding value $\\ge$ 6000, FL410", FN["bounding"]["FL410"]["kstar_n"])):
+    rows.append(f"{lab}, $n$ & {ks:.2f} & {yn(ks > 1.0748)} & {yn(ks > 1.23)} & {yn(ks > 1.37)} \\\\")
 write("supp_kstar.tex", "\n".join([
     r"\begin{table*}[t]", r"\centering",
-    r"\caption{Break-even reference scale $k^{*}$: each finding holds for $k < k^{*}$ ($k$ = PARMA / true flux); solar-minimum years, FL370 unless stated}",
+    r"\caption{Break-even reference scale $k^{*}$: each finding holds for $k < k^{*}$ ($k$ = PARMA / true flux); PARMA neutrons and protons for the 6000 findings, neutrons only where marked $n$; solar-minimum years, FL370 unless stated}",
     r"\label{tab:s_kstar}", r"\setlength{\tabcolsep}{2.5pt}", r"\begin{tabular}{lcccc}", r"\toprule",
-    r"Finding & $k^{*}$ & \shortstack{Holds at\\$k = 1.07$} & \shortstack{Holds at\\$k = 1.28$} & \shortstack{Holds at\\$k = 1.37$} \\", r"\midrule", *rows,
+    r"Finding & $k^{*}$ & \shortstack{Holds at\\$k = 1.07$} & \shortstack{Holds at\\$k = 1.23$} & \shortstack{Holds at\\$k = 1.37$} \\", r"\midrule", *rows,
     r"\bottomrule", r"\end{tabular}", r"\end{table*}", ""]))
 
 # Table SVI: service-life averages (code/life_average.py), Step 8 round 6 (M4)
@@ -151,12 +158,12 @@ for sub, g in SB.groupby("subset", sort=False):
     rows.append(r"\multicolumn{6}{l}{\textit{" + sub.replace("-", "--") + f" ({int(g.n.iloc[0])} points)" + r"}} \\")
     for r in g.itertuples():
         rows.append(f"\\quad {MOD[r.model]} & {r.median:.2f} & {100 * r.below1_k1:.0f} ({100 * r.below1_k1_lo:.0f}--{100 * r.below1_k1_hi:.0f}) & "
-                    f"{100 * r.below1_k107:.0f} & {100 * r.below1_k128:.0f} & {r.spread:.2f} \\\\")
+                    f"{100 * r.below1_k107:.0f} & {100 * r.below1_k123:.0f} & {r.spread:.2f} \\\\")
 write("supp_subsets.tex", "\n".join([
     r"\begin{table}[t]", r"\centering",
-    r"\caption{Cruise statistics by flight-level band, in the northern long-haul latitude band and with a traffic-proxy weighting: median ratio, share below one at $k$ = 1 (95\% interval), 1.07 and 1.28 (\%), and P95/P5}",
+    r"\caption{Cruise statistics by flight-level band, in the northern long-haul latitude band and with a traffic-proxy weighting: median ratio, share below one at $k$ = 1 (95\% interval), 1.07 and 1.23 (\%), and P95/P5}",
     r"\label{tab:s_subsets}", r"\setlength{\tabcolsep}{3pt}", r"\footnotesize", r"\begin{tabular}{lccccc}", r"\toprule",
-    r"Subset and model & Median & $k = 1$ & 1.07 & 1.28 & P95/P5 \\", r"\midrule", *rows,
+    r"Subset and model & Median & $k = 1$ & 1.07 & 1.23 & P95/P5 \\", r"\midrule", *rows,
     r"\bottomrule", r"\end{tabular}", r"\end{table}", ""]))
 
 # Table SX: device sensitivity on the routes at FL370 (code/device_r8.py), Step 8 round 8 (M5)
@@ -172,3 +179,41 @@ write("supp_device_sens.tex", "\n".join([
     r"\caption{IEC count on its 6000 basis divided by the neutron and proton reference count, seven routes at FL370, 2019 and 2025 annual means (range over routes and years), for the Renesas fits, M2 with other thresholds and M3 with other GeV shapes, and five test cross sections ($\bar\sigma_{\mathrm{sp}}$: averaged over the sea-level shape from 10~MeV to the upper end in MeV)}",
     r"\label{tab:s_devsens}", r"\setlength{\tabcolsep}{4pt}", r"\begin{tabular}{lccccc}", r"\toprule",
     r"Response & " + " & ".join(h for _, h in COLS) + r" \\", r"\midrule", *rows, r"\bottomrule", r"\end{tabular}", r"\end{table*}", ""]))
+
+# Table SXI: uncertainty budget for the headline IEC statistics, Step 8 round 9 (F6, R3)
+S4 = ROOT / "data/step4"
+BCI = pd.read_csv(S4 / "revision_bootstrap_ci.csv").set_index("model")
+PS = json.load(open(S4 / "pooled_spread.json")); FS = json.load(open(S4 / "fresh_sample.json"))
+JS = json.load(open(S4 / "joint_sensitivity.json")); OS = json.load(open(S4 / "r7_checks.json"))["offset_stress"]
+CX = json.load(open(S4 / "cari_crosscheck.json")); CE = json.load(open(S4 / "cutoff_epoch.json"))
+TI = pd.read_csv(S4 / "revision_k_flat_jesd.csv").set_index("model")
+_Vb = pd.read_csv(S4 / "validation_direct.csv"); _Cb = _Vb[_Vb.alt_km.between(9.0, 12.5)]; _rb = (_Cb.S1_IEC / _Cb.PARMA).values
+import numpy as _npb
+kb = lambda k: f"{100 * _npb.mean(k * _rb < 1):.0f}"
+rg = lambda a, b, f="{:.2f}": f.format(a) + "--" + f.format(b)
+pc = lambda a, b: f"{100 * a:.0f}--{100 * b:.0f}"
+ii, jj = BCI.loc["S1_IEC"], BCI.loc["S2_JESD_mid"]
+offs = [v["IEC"] for k, v in OS.items() if k not in ("kRc_fit", "base", "IEC_over_JESD_spread_range")]
+offj = [v["JESD"] for k, v in OS.items() if k not in ("kRc_fit", "base", "IEC_over_JESD_spread_range")]
+po = PS["pooled"]
+rows = [r"\multicolumn{4}{l}{\textit{Sampling (bootstrap 95\% intervals)}} \\",
+        f"First sample, 802 points & {100 * TI.loc['S1_IEC', 'below1_k1.0']:.0f} ({pc(ii.below1_lo, ii.below1_hi)}) & {rg(ii.spread_lo, ii.spread_hi)} & {rg(jj.spread_lo, jj.spread_hi)} \\\\",
+        f"Fresh sample, 779 points & {100 * FS['IEC']['below1']:.0f} & {rg(*PS['fresh']['IEC_spread']['percentile'])} & {rg(*PS['fresh']['JESD_spread']['percentile'])} \\\\",
+        f"Pooled, 1581 points & {100 * po['IEC_below1']:.0f} & {rg(*po['IEC_spread']['percentile'])} & {rg(*po['JESD_spread']['percentile'])} \\\\",
+        r"\multicolumn{4}{l}{\textit{Assumptions (ranges over stated alternatives, not confidence intervals)}} \\",
+        f"Digitization, smooth 2\\% &{pc(JS['digitization_only_IEC']['below1'][0], JS['digitization_only_IEC']['below1'][2])} & {rg(JS['digitization_only_IEC']['spread'][0], JS['digitization_only_IEC']['spread'][2])} & -- \\\\",
+        f"Scale $k$, envelope 0.88--1.37$^{{a}}$ & {kb(1.37)}--{kb(0.88)} & unchanged & unchanged \\\\",
+        f"Scale $k$, anchor above 10~MeV, 1.23--1.37 & {kb(1.37)}--{kb(1.23)} & unchanged & unchanged \\\\",
+        f"Offset varying with $R_c$ and $W$ & -- & {rg(min(offs), max(offs))} & {rg(min(offj), max(offj))} \\\\",
+        f"CARI-7 as reference (totals)$^{{b}}$ & -- & {CX['spread_IEC']['CARI_total']:.2f} & {CX['spread_JESD89']['CARI_total']:.2f} \\\\",
+        f"Cutoff map shifted to 2025 & -- & {CE['cruise_points']['IEC_spread_shift']:.2f} & -- \\\\",
+        f"Joint: $k$ log-uniform on envelope, digitization, resampling$^{{c}}$ & {pc(JS['envelope_0.88_1.37']['IEC']['below1'][0], JS['envelope_0.88_1.37']['IEC']['below1'][2])} & "
+        f"{rg(JS['envelope_0.88_1.37']['IEC']['spread'][0], JS['envelope_0.88_1.37']['IEC']['spread'][2])} & {rg(JS['envelope_0.88_1.37']['JESD']['spread'][0], JS['envelope_0.88_1.37']['JESD']['spread'][2])} \\\\"]
+write("supp_budget.tex", "\n".join([
+    r"\begin{table}[t]", r"\centering",
+    r"\caption{Uncertainty budget for the scaled IEC curves (5600, PARMA neutrons, cruise): share of points below one at $k = 1$ (\%) and P95/P5, with JESD89 for comparison}",
+    r"\label{tab:s_budget}", r"\setlength{\tabcolsep}{2.5pt}", r"\footnotesize", r"\begin{tabular}{p{3.3cm}ccc}", r"\toprule",
+    r"Source & \shortstack{IEC below\\one (\%)} & \shortstack{IEC\\P95/P5} & \shortstack{JESD89\\P95/P5} \\", r"\midrule", *rows,
+    r"\bottomrule", r"\end{tabular}",
+    r"\par\smallskip\footnotesize $^{a}$Share below one at the stated ends of $k$; the lower end comes from a sea-level comparison with the JESD89B reference, the upper end from the ER-2 flight at 11.9~km in free air. $^{b}$Against 2.66 and 1.42 with the PARMA total at the same conditions. $^{c}$2.5th to 97.5th percentiles of the draws; their width follows from the assumed distribution of $k$.",
+    r"\end{table}", ""]))

@@ -39,6 +39,19 @@ for _ in range(B):
 dd = np.array(dd)
 res["digitization_only_IEC"] = dict(below1=[float(np.percentile(dd[:, 0], q)) for q in (2.5, 50, 97.5)],
                                     spread=[float(np.percentile(dd[:, 1], q)) for q in (2.5, 50, 97.5)])
+# Step 8 round 9 (F3): scale range of the anchor above 10 MeV (1.23 ER-2 setting to 1.37 free air)
+out = {"IEC": [], "JESD": []}
+for _ in range(B):
+    k = np.exp(rng.uniform(np.log(1.23), np.log(1.37)))
+    a0, a1, b0, b1 = rng.normal(0, SIG, 4)
+    dig = (1 + a0 + a1 * (h - 12.0) / 3.0) * (1 + b0 + b1 * (al - 45.0) / 45.0)
+    i = rng.integers(0, n, n)
+    for lab, r in (("IEC", r_iec0 * dig), ("JESD", r_j)):
+        rr = r[i]
+        out[lab].append([np.median(k * rr), np.mean(k * rr < 1), np.percentile(rr, 95) / np.percentile(rr, 5)])
+res["gt10_anchor_1.23_1.37"] = {lab: dict(zip(("median_kr", "below1", "spread"),
+                                [[float(np.percentile(np.array(v)[:, j], q)) for q in (2.5, 50, 97.5)] for j in range(3)]))
+                                for lab, v in out.items()}
 res["settings"] = dict(B=B, sigma_digitization=SIG, seed=20261023)
 json.dump(res, open(OUT / "joint_sensitivity.json", "w"), indent=1)
 print(json.dumps(res, indent=1))

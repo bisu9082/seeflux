@@ -4,7 +4,7 @@
 # band, approximated as 0.1 (south of 20 S), 0.1 (20 S-20 N), 0.7 (20-60 N), 0.1 (north of 60 N), relative to the area
 # share of the band; this is an illustration, not traffic data.
 # For the scaled IEC curves (5600, neutrons), the 6000 curves and the larger of 6000 and the curves (neutrons + protons)
-# and JESD89: median, share below one at k = 1, 1.07 and 1.28, P95/P5; bootstrap 95% intervals (B = 2000).
+# and JESD89: median, share below one at k = 1, 1.07, 1.23 (r9) and 1.28, P95/P5; bootstrap 95% intervals (B = 2000).
 # Output: data/step4/subsets.csv
 import pathlib, numpy as np, pandas as pd
 
@@ -34,7 +34,8 @@ def stats(x, w):
     x = np.asarray(x); w = np.asarray(w, float)
     p5, p50, p95 = wq(x, w, 0.05), wq(x, w, 0.5), wq(x, w, 0.95)
     return dict(median=p50, below1_k1=float(np.average(x < 1, weights=w)), below1_k107=float(np.average(1.07 * x < 1, weights=w)),
-                below1_k128=float(np.average(1.28 * x < 1, weights=w)), spread=p95 / p5)
+                below1_k128=float(np.average(1.28 * x < 1, weights=w)),
+                below1_k123=float(np.average(1.23 * x < 1, weights=w)), spread=p95 / p5)
 
 
 rows = []

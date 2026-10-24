@@ -1,6 +1,6 @@
 # seeflux analysis code
 
-Code for the manuscript *Auditing IEC 62396-1 and JESD89 Neutron Flux Values at Cruise Altitude: Cutoff Rigidity, Solar Phase and Proton Contributions* (target: IEEE Transactions on Nuclear Science).
+Code for the manuscript *Auditing the Boeing-Model Neutron Flux Procedure Referenced by IEC 62396-1 at Cruise Altitude: Cutoff Rigidity, Solar Phase and Implications for Upset Rates* (target: IEEE Transactions on Nuclear Science).
 
 ## What it does
 1. Digitizes the Boeing (IEC 62396-1 lineage) altitude and latitude curves from Normand 1996, Figs 2 and 3.
@@ -38,7 +38,7 @@ Outputs:
 - `data/step4/*.csv`: per-step tables
 - `data/run_log.txt`: full log
 
-Seeds are fixed per step: 20261014 (audit.py location sample, fit_formula.py bootstrap), 20261015 (validate_direct.py independent set), 20261016 (audit_revision.py bootstrap intervals, audit_revision2.py cross-validation folds, ml_analysis.py). The PARMA solar table used is input/FFPtable.day of the EXPACS C++ package (file date 2026-03-27, last entry 2026-03-26); the daily W at every independent point is also stored in data/step4/validation_direct.csv.
+Seeds are fixed per step: 20261014 (audit.py location sample, fit_formula.py bootstrap), 20261015 (validate_direct.py independent set), 20261016 (audit_revision.py bootstrap intervals, audit_revision2.py cross-validation folds, ml_analysis.py), 20261018 (paired_bootstrap.py), 20261023 (fresh_sample.py fresh set; also the subsets.py and joint_sensitivity.py resampling), 20261024 (pooled_spread.py). The PARMA solar table used is input/FFPtable.day of the EXPACS C++ package (file date 2026-03-27, last entry 2026-03-26); the daily W at every independent point is also stored in data/step4/validation_direct.csv.
 
 ## Units and conventions
 - Flux is in n cm⁻² h⁻¹, for E > 10 MeV unless the column says otherwise.
@@ -57,3 +57,10 @@ Seeds are fixed per step: 20261014 (audit.py location sample, fit_formula.py boo
 
 ## Figures that do not need PARMA
 All figure scripts in `figure/` read only the CSV/JSON outputs in `data/` (and `data/geo/` for coastlines), so Figs. 1 to 5 and S1 can be regenerated from the released outputs without compiling PARMA. Fig. 1 also writes `data/step4/fig1_stats.json`.
+
+## Additions in Step 8 round 9 (2026-10-24)
+- `pooled_spread.py`: headline spread on the pooled first and fresh samples (percentile and BCa bootstrap), SD of ln r, IEC/JESD89 ratio, first-minus-fresh difference.
+- `floor_neutron.py`: the 6000 value as a floor against PARMA neutrons and against neutrons and protons, by altitude band and at several k; break-even k for route peaks and the bounding environment; the standard's polar value against PARMA.
+- `counterfactual.py` (extended): order-free (Shapley) split of the spread reduction between coordinate and solar term, also on the pooled samples; writes `data/step4/zonal_cutoff.csv` when the PARMA cutoff file is present and reads it otherwise, so the step reruns from the released files.
+- `joint_sensitivity.py` (extended): k drawn over the anchor above 10 MeV (1.23 to 1.37), appended after the earlier draws so their results are unchanged.
+- `make_supp_tables.py`: Table SXI (uncertainty budget); Table SV with k = 1.07, 1.23, 1.37 and neutron-only rows.

@@ -1,6 +1,6 @@
 # seeflux: end-to-end analysis for
 # "Auditing the Boeing-Model Neutron Flux Procedure Referenced by IEC 62396-1 at Cruise Altitude: Cutoff Rigidity,
-#  Solar Phase and Device Response"
+#  Solar Phase and Implications for Upset Rates"
 #
 # Runs every step in STEPS in order and writes data/experiment_summary.json. All reported numbers are read from the step
 # outputs in data/step4; nothing is typed in by hand. Core steps: Boeing curves digitized from Normand 1996; PARMA 4.10
@@ -17,7 +17,7 @@ CODE = pathlib.Path(__file__).resolve().parent
 ROOT = CODE.parent
 OUT = ROOT / "data/step4"
 STEPS = ["digitize_normand.py", "grid_parma.py", "audit.py", "fit_formula.py", "validate_direct.py",
-         "bench_goldhagen.py", "er2_gt10_anchor.py", "er2_geometry.py", "uncertainty_band.py", "audit_revision.py", "audit_revision2.py", "check_bsyd_tableA1.py", "routes.py", "aircraft_sensitivity.py", "ser_routes.py", "routes_levels.py", "cari_crosscheck.py", "k_breakeven.py", "life_average.py", "device_parametric.py", "cutoff_epoch.py", "paired_bootstrap.py", "r7_checks.py", "subsets.py", "counterfactual.py", "device_r7.py", "device_r8.py", "joint_sensitivity.py", "fresh_sample.py", "stored_values.py", "verify_parma.py"]
+         "bench_goldhagen.py", "er2_gt10_anchor.py", "er2_geometry.py", "uncertainty_band.py", "audit_revision.py", "audit_revision2.py", "check_bsyd_tableA1.py", "routes.py", "aircraft_sensitivity.py", "ser_routes.py", "routes_levels.py", "cari_crosscheck.py", "k_breakeven.py", "life_average.py", "device_parametric.py", "cutoff_epoch.py", "paired_bootstrap.py", "r7_checks.py", "subsets.py", "device_r7.py", "device_r8.py", "joint_sensitivity.py", "fresh_sample.py", "counterfactual.py", "pooled_spread.py", "floor_neutron.py", "stored_values.py", "verify_parma.py"]
 
 
 def run_all(log):
