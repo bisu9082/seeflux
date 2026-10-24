@@ -1,0 +1,58 @@
+{
+ "source": "Goldhagen et al. 2004, Fig. 5, 200 g/cm2 (11.9 km, 4.3 GV), vector path of the published PDF",
+ "axis_ticks_x": [
+  [
+   -8.0,
+   113.88771438598633
+  ],
+  [
+   -6.0,
+   138.87924194335938
+  ],
+  [
+   -4.0,
+   163.8972396850586
+  ],
+  [
+   -2.0,
+   188.88824462890625
+  ],
+  [
+   0.0,
+   213.88711547851562
+  ],
+  [
+   2.0,
+   238.87162017822266
+  ],
+  [
+   4.0,
+   263.8626403808594
+  ]
+ ],
+ "axis_ticks_y": [
+  [
+   0.0,
+   387.6696319580078
+  ],
+  [
+   0.5,
+   344.95713806152344
+  ],
+  [
+   1.0,
+   302.2834014892578
+  ]
+ ],
+ "n_points": 151,
+ "measured_total_from_curve_cm2s": 3.417242527150739,
+ "measured_total_stated_cm2s": 3.4,
+ "total_check_ratio": 1.0050713315149233,
+ "measured_gt10_cm2s": 0.739984811307604,
+ "measured_gt10_fraction": 0.21654442300429744,
+ "PARMA_gt10_cm2s": 1.004514,
+ "PARMA_total_cm2s": 4.391231,
+ "k_gt10_PARMA_over_measured": 1.3574792139651553,
+ "k_total_PARMA_over_measured": 1.291538529411765,
+ "note": "Goldhagen et al. state the unfolded spectrum is lower than calculations above 10 MeV; unfolding uncertainty is not given per energy band"
+}

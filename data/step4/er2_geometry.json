@@ -1,0 +1,43 @@
+{
+ "W_1997_06_15": 28.6,
+ "W_1997_07_15": 32.8,
+ "Rc_map": {
+  "ER2_19N": 11.4,
+  "ER2_54N": 0.92,
+  "ER2_56N": 0.82,
+  "ER2_38N_11.9km": 4.39,
+  "ground_37N": 3.01
+ },
+ "ours (Jun, measured Rc, free air)": {
+  "inflight_total_min": 1.2394824742268042,
+  "inflight_total_max": 1.365483870967742,
+  "inflight_total_geomean": 1.2839343619681423,
+  "cruise_gt10_k": 1.3574792139651553,
+  "cruise_total_k": 1.291538529411765,
+  "ground_total": 1.1089150793650793
+ },
+ "geometry only (Jun, measured Rc, cabin g=-10.5)": {
+  "inflight_total_min": 1.0499030927835054,
+  "inflight_total_max": 1.1579120967741936,
+  "inflight_total_geomean": 1.0877584938100602,
+  "cruise_gt10_k": 1.2615898133778451,
+  "cruise_total_k": 1.0943073529411766,
+  "ground_total": 1.1089150793650793
+ },
+ "date+map only (Jul, map Rc, free air)": {
+  "inflight_total_min": 1.212956701030928,
+  "inflight_total_max": 1.3889274193548387,
+  "inflight_total_geomean": 1.2685895132887575,
+  "cruise_gt10_k": 1.3269798041730558,
+  "cruise_total_k": 1.2618420588235295,
+  "ground_total": 1.088597619047619
+ },
+ "developer (Jul, map Rc, cabin g=-10.5)": {
+  "inflight_total_min": 1.0274634020618558,
+  "inflight_total_max": 1.1777814516129033,
+  "inflight_total_geomean": 1.0747726384605256,
+  "cruise_gt10_k": 1.2332481505767663,
+  "cruise_total_k": 1.0691611764705882,
+  "ground_total": 1.088597619047619
+ }
+}

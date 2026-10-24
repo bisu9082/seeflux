@@ -1,0 +1,54 @@
+{
+ "periods": {
+  "cycle24": [
+   "2009-01",
+   "2019-12"
+  ],
+  "2009_2026": [
+   "2009-01",
+   "2026-03"
+  ]
+ },
+ "W_range": [
+  3.5387096774193547,
+  124.09032258064516
+ ],
+ "fleet_hours_weighted": {
+  "FL370_seven_routes": {
+   "cruise_mean_np_cycle24": 4015.240957635606,
+   "flight_mean_np_cycle24": 3784.1537565056688,
+   "cruise_mean_np_2009_2026": 3901.032841809158,
+   "flight_mean_np_2009_2026": 3676.945925489015
+  },
+  "FL370_northern_long_haul": {
+   "cruise_mean_np_cycle24": 5173.4021103980995,
+   "flight_mean_np_cycle24": 4870.034639104869,
+   "cruise_mean_np_2009_2026": 5014.169495846789,
+   "flight_mean_np_2009_2026": 4720.805781965802
+  },
+  "FL390_seven_routes": {
+   "cruise_mean_np_cycle24": 4447.647257935091,
+   "flight_mean_np_cycle24": 4193.135697139497,
+   "cruise_mean_np_2009_2026": 4318.559652846575,
+   "flight_mean_np_2009_2026": 4071.9363580925983
+  },
+  "FL390_northern_long_haul": {
+   "cruise_mean_np_cycle24": 5752.2965224532,
+   "flight_mean_np_cycle24": 5416.115369578556,
+   "cruise_mean_np_2009_2026": 5571.908921537728,
+   "flight_mean_np_2009_2026": 5247.0348080195145
+  },
+  "FL410_seven_routes": {
+   "cruise_mean_np_cycle24": 4886.473882894339,
+   "flight_mean_np_cycle24": 4608.363229380878,
+   "cruise_mean_np_2009_2026": 4741.65923502525,
+   "flight_mean_np_2009_2026": 4472.373985917307
+  },
+  "FL410_northern_long_haul": {
+   "cruise_mean_np_cycle24": 6344.402499244146,
+   "flight_mean_np_cycle24": 5974.734142843855,
+   "cruise_mean_np_2009_2026": 6141.491160587164,
+   "flight_mean_np_2009_2026": 5784.519375035819
+  }
+ }
+}

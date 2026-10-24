@@ -1,0 +1,5 @@
+{
+ "source": "Gordon et al., IEEE TNS 51(6):3427-3434 (2004), doi:10.1109/TNS.2004.839134, Table A-I 'Values of the scaling function F_BSYD,Smid(Rc) at sea level'; transcribed from data/refs/gordon2004ground.pdf p.7 on 2026-10-16",
+ "Rc_GV": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+ "F_BSYD_Smid": [1.019, 1.018, 1.002, 0.966, 0.920, 0.873, 0.828, 0.786, 0.747, 0.712, 0.679, 0.650, 0.623, 0.598, 0.576, 0.555, 0.536, 0.518]
+}

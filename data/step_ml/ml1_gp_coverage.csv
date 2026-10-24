@@ -1,0 +1,6 @@
+test,coverage95,median_sd_pct
+independent,0.7148,0.48
+extrapolate W>=100 (train W<=75),0.174,1.21
+extrapolate Rc>12 (train Rc<=12),1.0,49.02
+extrapolate alt>12.5 (train alt<=12),0.3544,1.18
+extrapolate alt<9 (train alt>=9),0.9363,1.15

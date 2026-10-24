@@ -1,0 +1,22 @@
+{
+ "device": "Renesas R1LV1616R 16 Mbit SRAM, 150 nm, SEU (Cecchetto et al. 2019, Table 2)",
+ "sigma_200MeV_M2_cm2_per_dev": 1.6061201559822047e-10,
+ "sigma_200MeV_M3_cm2_per_dev": 2.0406880888950199e-10,
+ "sigma_spectrum_avg_NYC_cm2_per_dev": {
+  "M2": 7.841102431868364e-11,
+  "M3": 1.8179930028331468e-10
+ },
+ "M3_cap_MeV": 3000,
+ "validation_geneva_12km_2016_07_01": {
+  "PARMA_gt10_ncm2h": 3443.6484,
+  "FIT_M2_PARMA": 289.921104,
+  "FIT_M3_PARMA": 1558.179,
+  "FIT_M2_MAIRE": 242,
+  "FIT_M3_MAIRE": 1168,
+  "MAIRE_gt10_ncm2h": 2834.0,
+  "FITp_M2_PARMA": 116.442252,
+  "FITp_M3_PARMA": 1329.48972,
+  "FITp_M2_MAIRE": 96,
+  "FITp_M3_MAIRE": 1055
+ }
+}

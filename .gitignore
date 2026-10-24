@@ -1,0 +1,22 @@
+# third-party software that is not redistributed
+parma/
+cari7/
+# publisher PDFs, figure crops and standards texts
+*.pdf
+data/refs/img/
+data/refs/standards_preview/
+# manuscript and internal review material
+latex/
+data/step1/
+data/step2/
+data/step3/
+data/step5/
+data/step7/
+data/step8*/
+pipeline_state.json
+# build and cache
+__pycache__/
+*.pyc
+*.log
+seeflux_driver
+*.exe

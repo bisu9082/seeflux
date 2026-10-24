@@ -1,0 +1,74 @@
+{
+ "n": 802,
+ "note": "CARI-7 reports total neutrons only; spreads use totals for both codes, PARMA >10 MeV for reference",
+ "spread_IEC": {
+  "PARMA_gt10_monthW": 2.6522588906431555,
+  "PARMA_total_monthW": 2.6558271833319673,
+  "CARI_total": 2.8052046214282247
+ },
+ "spread_JESD89": {
+  "PARMA_gt10_monthW": 1.4253474122486396,
+  "PARMA_total_monthW": 1.4203412574623597,
+  "CARI_total": 1.5387517176867735
+ },
+ "CARI_over_PARMA_total": {
+  "median": 0.8524184421507378,
+  "p05": 0.8011295270557625,
+  "p95": 0.9597473071444113,
+  "spearman_Rc": -0.7295087020642949,
+  "spearman_W": -0.2826936571221279,
+  "spearman_alt": 0.09616498739287954
+ },
+ "PARMA_gt10_over_total": {
+  "p05": 0.2251902554523695,
+  "p95": 0.23123800162811284
+ },
+ "route_swing_2019_over_2025_FL370": {
+  "ICN-JFK": {
+   "CARI_total": 1.6967233970158473,
+   "PARMA_total": 1.5025619405239925,
+   "PARMA_gt10": 1.4928835709270203,
+   "n_points": 16
+  },
+  "ICN-FRA": {
+   "CARI_total": 1.6230683942567918,
+   "PARMA_total": 1.4397246195880062,
+   "PARMA_gt10": 1.4335430701811949,
+   "n_points": 16
+  },
+  "ICN-LAX": {
+   "CARI_total": 1.4490845741872247,
+   "PARMA_total": 1.3276428771796465,
+   "PARMA_gt10": 1.3274282517996316,
+   "n_points": 15
+  },
+  "ICN-SIN": {
+   "CARI_total": 1.1143282869409143,
+   "PARMA_total": 1.1138988416146938,
+   "PARMA_gt10": 1.1151527830326664,
+   "n_points": 16
+  },
+  "ICN-SYD": {
+   "CARI_total": 1.158197719718791,
+   "PARMA_total": 1.1439185887704424,
+   "PARMA_gt10": 1.144724699013511,
+   "n_points": 16
+  },
+  "GRU-JNB": {
+   "CARI_total": 1.2845707460268845,
+   "PARMA_total": 1.243101833683287,
+   "PARMA_gt10": 1.2425327528170171,
+   "n_points": 16
+  },
+  "SYD-SCL": {
+   "CARI_total": 1.5948441518144116,
+   "PARMA_total": 1.4278016064849608,
+   "PARMA_gt10": 1.4215105798497403,
+   "n_points": 16
+  }
+ },
+ "W_annual": {
+  "y2019": 12.653150684931505,
+  "y2025": 107.00497237569061
+ }
+}

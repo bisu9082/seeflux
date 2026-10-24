@@ -1,0 +1,75 @@
+file,status,detail
+data/step4/aircraft_sensitivity.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/audit_nodes.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/audit_summary.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/bench_goldhagen2004.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/bench_nyc.json,identical,
+data/step4/bsyd_tableA1_check.json,identical,
+data/step4/cari_crosscheck.json,identical,
+data/step4/cari_crosscheck_points.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/counterfactual.json,identical,
+data/step4/cutoff_epoch.json,identical,
+data/step4/cutoff_epoch_points.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/device_parametric.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/device_parametric.json,identical,
+data/step4/device_r7.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/device_r7.json,identical,
+data/step4/device_r8.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/device_r8.json,identical,
+data/step4/device_r8_points.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/er2_geometry.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/er2_geometry.json,identical,
+data/step4/er2_gt10_anchor.json,identical,
+data/step4/fig1_stats.json,MISSING in clean room,
+data/step4/formula_bootstrap_params.npy,identical,max abs 0.00e+00
+data/step4/formula_fit.json,identical,
+data/step4/formula_heldout_by_group.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/fresh_sample.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/fresh_sample.json,identical,
+data/step4/joint_sensitivity.json,identical,
+data/step4/k_breakeven.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/k_breakeven.json,identical,
+data/step4/latitude_ambiguity_12km_W100.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/life_average.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/life_average.json,identical,
+data/step4/life_average_monthly.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/normand1996_fig2_digitized.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/normand1996_fig3_digitized.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/paired_bootstrap.json,identical,
+data/step4/parma_grid.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/parma_verification.json,identical,
+data/step4/r7_checks.json,identical,
+data/step4/r7_points_np.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/rc_map_parma.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/reference_band.json,identical,
+data/step4/revision2_attribution_sampled.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/revision2_bounding_by_level.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/revision2_flat_np.json,identical,
+data/step4/revision_bootstrap_ci.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/revision_breakdown.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/revision_k_flat_jesd.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/revision_sensitivity.json,identical,
+data/step4/routes_levels.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/routes_levels_profiles_FL370.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/routes_monthly.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/routes_monthly_south.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/routes_profiles.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/routes_summary.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/ser_meta.json,identical,
+data/step4/ser_routes.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/stored_values.json,identical,
+data/step4/subsets.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/uncertainty_band.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/validation_direct.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step4/validation_direct_summary.csv,identical,"max rel 0.00e+00, text cells 0"
+data/step_ml/ml1_emulators.csv,MISSING in clean room,
+data/step_ml/ml1_gp_coverage.csv,MISSING in clean room,
+data/step_ml/ml2_attribution_r2.csv,MISSING in clean room,
+data/step_ml/ml2_attribution_r2_randomsplit.csv,MISSING in clean room,
+data/step_ml/ml2_shap_shares.csv,MISSING in clean room,
+data/step_ml/ml2_shap_shares_randomsplit.csv,MISSING in clean room,
+data/step_ml/ml3_noncons_rule.csv,MISSING in clean room,
+data/step_ml/ml4_extrapolation.csv,MISSING in clean room,
+data/step_ml/ml4_nested.csv,MISSING in clean room,
+data/step_ml/ml4_symbolic_path.csv,MISSING in clean room,
+data/step_ml/ml_run_meta.json,MISSING in clean room,

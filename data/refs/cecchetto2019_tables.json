@@ -1,0 +1,20 @@
+{
+ "source": "Cecchetto, Garcia Alia, Wrobel, Aerospace 6(11):119 (2019), doi:10.3390/aerospace6110119, open access (CC BY 4.0); tables read from https://www.mdpi.com/2226-4310/6/11/119/htm on 2026-10-15",
+ "weibull_form": "sigma(E) = sigma_sat * (1 - exp(-((E - E_th)/W)^s)) for E > E_th, zero otherwise (4-parameter Weibull, Sec. 4)",
+ "table2_weibull": {
+  "Renesas_R1LV1616R_150nm_16Mbit_SEU": {"M2": {"sigma_sat_cm2_per_dev": 1.8e-10, "E_th_MeV": 35, "W_MeV": 100, "s": 1.6},
+                                         "M3": {"sigma_sat_cm2_per_dev": 8.2e-9, "E_th_MeV": 35, "W_MeV": 2800, "s": 1.3}},
+  "Alliance_AS7C34098A_200nm_4Mbit_SEL": {"M2": {"sigma_sat_cm2_per_dev": 4.0e-10, "E_th_MeV": 20, "W_MeV": 156, "s": 1.93},
+                                          "M3": {"sigma_sat_cm2_per_dev": 7.5e-9, "E_th_MeV": 25, "W_MeV": 2210, "s": 1.41}},
+  "Samsung_K6R4016V1D_180nm_4Mbit_SEL": {"M2": {"sigma_sat_cm2_per_dev": 5.0e-10, "E_th_MeV": 35, "W_MeV": 157, "s": 1.74},
+                                         "M3": {"sigma_sat_cm2_per_dev": 7.5e-9, "E_th_MeV": 40, "W_MeV": 2000, "s": 1.25}}
+ },
+ "table3_FIT_12km_Geneva_by_energy": {
+  "note": "FIT/device at 12 km over Geneva, MAIRE spectra for 2016-07-01, Kp = 4",
+  "Renesas": {"neutrons_below230": {"M2": 121, "M3": 128}, "neutrons_above230": {"M2": 121, "M3": 1040},
+              "protons_below230": {"M2": 21, "M3": 23}, "protons_above230": {"M2": 75, "M3": 1032}}
+ },
+ "table4_FIT_neutrons_plus_protons": {
+  "Renesas_SEU": {"ground": {"M2": 1.8, "M3": 4.7}, "12km": {"M2": 338, "M3": 2223}, "20km": {"M2": 618, "M3": 7075}}
+ }
+}

@@ -1,0 +1,37 @@
+model,test,median_pct,p95_pct,max_pct
+Eq. (1),held-out grid (4669),2.54,7.17,20.3
+Eq. (1),independent (1995),2.71,7.29,16.67
+"Ridge, cubic poly",held-out grid (4669),2.77,7.57,13.43
+"Ridge, cubic poly",independent (1995),3.67,7.82,11.39
+Gaussian process,held-out grid (4669),0.18,1.18,3.81
+Gaussian process,independent (1995),0.26,1.66,3.08
+XGBoost,held-out grid (4669),9.65,27.42,49.74
+XGBoost,independent (1995),9.74,29.58,49.91
+MLP ensemble,held-out grid (4669),0.94,2.66,8.16
+MLP ensemble,independent (1995),1.15,3.33,7.37
+"kNN (k=4, distance)",held-out grid (4669),4.25,15.55,32.02
+"kNN (k=4, distance)",independent (1995),4.17,13.98,25.79
+Eq. (1),extrapolate W>=100 (train W<=75),5.89,17.0,23.3
+"Ridge, cubic poly",extrapolate W>=100 (train W<=75),82.43,1750.61,80217.92
+Gaussian process,extrapolate W>=100 (train W<=75),4.11,13.37,21.08
+XGBoost,extrapolate W>=100 (train W<=75),13.59,42.67,70.4
+MLP ensemble,extrapolate W>=100 (train W<=75),8.85,30.77,51.14
+"kNN (k=4, distance)",extrapolate W>=100 (train W<=75),11.79,43.45,70.13
+Eq. (1),extrapolate Rc>12 (train Rc<=12),5.57,11.55,18.03
+"Ridge, cubic poly",extrapolate Rc>12 (train Rc<=12),30.97,112.18,133.33
+Gaussian process,extrapolate Rc>12 (train Rc<=12),25.22,56.82,62.86
+XGBoost,extrapolate Rc>12 (train Rc<=12),24.09,61.15,77.91
+MLP ensemble,extrapolate Rc>12 (train Rc<=12),3.7,9.53,20.75
+"kNN (k=4, distance)",extrapolate Rc>12 (train Rc<=12),30.1,67.72,115.14
+Eq. (1),extrapolate alt>12.5 (train alt<=12),7.67,16.69,24.17
+"Ridge, cubic poly",extrapolate alt>12.5 (train alt<=12),3.08,9.31,16.29
+Gaussian process,extrapolate alt>12.5 (train alt<=12),2.4,5.5,8.27
+XGBoost,extrapolate alt>12.5 (train alt<=12),7.2,20.87,32.13
+MLP ensemble,extrapolate alt>12.5 (train alt<=12),1.68,5.46,9.63
+"kNN (k=4, distance)",extrapolate alt>12.5 (train alt<=12),11.04,29.8,42.95
+Eq. (1),extrapolate alt<9 (train alt>=9),4.15,15.64,48.1
+"Ridge, cubic poly",extrapolate alt<9 (train alt>=9),2.63,7.03,9.37
+Gaussian process,extrapolate alt<9 (train alt>=9),0.99,2.56,3.89
+XGBoost,extrapolate alt<9 (train alt>=9),79.37,199.29,284.9
+MLP ensemble,extrapolate alt<9 (train alt>=9),4.41,23.68,45.67
+"kNN (k=4, distance)",extrapolate alt<9 (train alt>=9),65.72,171.3,233.5

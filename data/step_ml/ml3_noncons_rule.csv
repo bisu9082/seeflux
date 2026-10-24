@@ -1,0 +1,7 @@
+features,model,n_test,base_rate,balanced_acc,recall_noncons,flagged_share
+"A: alt,|lat|,W",tree depth 2,802,0.247,0.6282,0.8889,0.6958
+"A: alt,|lat|,W",tree depth 3,802,0.247,0.6229,0.9495,0.7643
+"A: alt,|lat|,W",logistic,802,0.247,0.6552,0.8485,0.6147
+"B: alt,Rc,W",tree depth 2,802,0.247,0.6835,0.9697,0.6933
+"B: alt,Rc,W",tree depth 3,802,0.247,0.7037,0.9091,0.6022
+"B: alt,Rc,W",logistic,802,0.247,0.633,0.7677,0.5673

@@ -1,0 +1,206 @@
+{
+ "match_rms_GV": {
+  "1965": {
+   "n": 57960,
+   "mean": 0.22201918242502855,
+   "rms": 0.610684642799177,
+   "max_abs": 2.99
+  },
+  "1980": {
+   "n": 57960,
+   "mean": 0.1422193115369292,
+   "rms": 0.4186517183530038,
+   "max_abs": 2.34
+  },
+  "1990": {
+   "n": 57960,
+   "mean": 0.0826466675477958,
+   "rms": 0.2666863723487827,
+   "max_abs": 1.62
+  },
+  "1995": {
+   "n": 57960,
+   "mean": 0.053298590048722484,
+   "rms": 0.2165232481564609,
+   "max_abs": 19.0
+  },
+  "2000": {
+   "n": 57960,
+   "mean": 0.029781796894531126,
+   "rms": 0.12715490165387197,
+   "max_abs": 1.1600000000000001
+  },
+  "2010": {
+   "n": 57960,
+   "mean": -0.01650972865261513,
+   "rms": 0.10059176089809613,
+   "max_abs": 1.4300000000000006
+  }
+ },
+ "best_epoch": 2010,
+ "secular_rate_2000_2010": {
+  "global_mean_GV_per_decade": -0.03894103041589075,
+  "south_atlantic_mean_GV_per_decade": -0.18889632107023407
+ },
+ "dRc_to_2025": {
+  "min": -0.7649999999999997,
+  "max": 1.2599999999999998,
+  "south_atlantic_mean": -0.28334448160535114
+ },
+ "routes_FL370": {
+  "ICN-JFK": {
+   "y2009": {
+    "IEC_over_PARMA_static": 1.1373062226506803,
+    "IEC_over_PARMA_2025map": 1.135504314231278,
+    "PARMA_change": 0.0015868794128026664
+   },
+   "y2019": {
+    "IEC_over_PARMA_static": 1.1515016701979355,
+    "IEC_over_PARMA_2025map": 1.1496726691704142,
+    "PARMA_change": 0.001590888499455323
+   },
+   "y2025": {
+    "IEC_over_PARMA_static": 1.7229021552688688,
+    "IEC_over_PARMA_2025map": 1.719883868260239,
+    "PARMA_change": 0.0017549365188724853
+   },
+   "dRc_route_min": -0.3469144319999984,
+   "dRc_route_max": 0.253809588
+  },
+  "ICN-FRA": {
+   "y2009": {
+    "IEC_over_PARMA_static": 1.261523215130635,
+    "IEC_over_PARMA_2025map": 1.238638206988279,
+    "PARMA_change": 0.018475942380302035
+   },
+   "y2019": {
+    "IEC_over_PARMA_static": 1.2757857269787647,
+    "IEC_over_PARMA_2025map": 1.2528156607849041,
+    "PARMA_change": 0.01833475339817303
+   },
+   "y2025": {
+    "IEC_over_PARMA_static": 1.8312020679767793,
+    "IEC_over_PARMA_2025map": 1.8070515992710772,
+    "PARMA_change": 0.013364570616269944
+   },
+   "dRc_route_min": -0.37398299999999907,
+   "dRc_route_max": 0.03206688659999957
+  },
+  "ICN-LAX": {
+   "y2009": {
+    "IEC_over_PARMA_static": 1.3541069708589535,
+    "IEC_over_PARMA_2025map": 1.33974736692846,
+    "PARMA_change": 0.01071814305066665
+   },
+   "y2019": {
+    "IEC_over_PARMA_static": 1.366061650707177,
+    "IEC_over_PARMA_2025map": 1.3516589205234986,
+    "PARMA_change": 0.010655595109822613
+   },
+   "y2025": {
+    "IEC_over_PARMA_static": 1.8139331211610115,
+    "IEC_over_PARMA_2025map": 1.7981801374783717,
+    "PARMA_change": 0.008760514786205098
+   },
+   "dRc_route_min": -0.34173954900000325,
+   "dRc_route_max": 0.07413331200000162
+  },
+  "ICN-SIN": {
+   "y2009": {
+    "IEC_over_PARMA_static": 1.83531054173883,
+    "IEC_over_PARMA_2025map": 1.8135038774368508,
+    "PARMA_change": 0.012024603075456497
+   },
+   "y2019": {
+    "IEC_over_PARMA_static": 1.8407399093661945,
+    "IEC_over_PARMA_2025map": 1.81889809690099,
+    "PARMA_change": 0.01200826615983508
+   },
+   "y2025": {
+    "IEC_over_PARMA_static": 2.0515468567611674,
+    "IEC_over_PARMA_2025map": 2.028148161233988,
+    "PARMA_change": 0.01153697544115495
+   },
+   "dRc_route_min": -0.3920830560000006,
+   "dRc_route_max": 0.0036594000000000904
+  },
+  "ICN-SYD": {
+   "y2009": {
+    "IEC_over_PARMA_static": 1.340963620964185,
+    "IEC_over_PARMA_2025map": 1.3367377116398496,
+    "PARMA_change": 0.0031613601438320593
+   },
+   "y2019": {
+    "IEC_over_PARMA_static": 1.346175744866899,
+    "IEC_over_PARMA_2025map": 1.3419103265213304,
+    "PARMA_change": 0.0031786165299330094
+   },
+   "y2025": {
+    "IEC_over_PARMA_static": 1.5440268994481756,
+    "IEC_over_PARMA_2025map": 1.5383308322899776,
+    "PARMA_change": 0.0037027582355082522
+   },
+   "dRc_route_min": -0.3449342910000013,
+   "dRc_route_max": 0.22736549999999944
+  },
+  "GRU-JNB": {
+   "y2009": {
+    "IEC_over_PARMA_static": 0.8421047595932951,
+    "IEC_over_PARMA_2025map": 0.8018779574763953,
+    "PARMA_change": 0.05016574123511042
+   },
+   "y2019": {
+    "IEC_over_PARMA_static": 0.8475265139494634,
+    "IEC_over_PARMA_2025map": 0.8072507406958487,
+    "PARMA_change": 0.049892519415834835
+   },
+   "y2025": {
+    "IEC_over_PARMA_static": 1.0537599830228843,
+    "IEC_over_PARMA_2025map": 1.0121050773486828,
+    "PARMA_change": 0.0411567006296627
+   },
+   "dRc_route_min": -0.7002032209499998,
+   "dRc_route_max": 0.0715635681000002
+  },
+  "SYD-SCL": {
+   "y2009": {
+    "IEC_over_PARMA_static": 1.220196671485007,
+    "IEC_over_PARMA_2025map": 1.2102749486824422,
+    "PARMA_change": 0.008197908097962392
+   },
+   "y2019": {
+    "IEC_over_PARMA_static": 1.2337644460301573,
+    "IEC_over_PARMA_2025map": 1.223740684331527,
+    "PARMA_change": 0.008191083149373002
+   },
+   "y2025": {
+    "IEC_over_PARMA_static": 1.7604163194779476,
+    "IEC_over_PARMA_2025map": 1.7470039970272622,
+    "PARMA_change": 0.007677327855865279
+   },
+   "dRc_route_min": -0.5239709999999995,
+   "dRc_route_max": 0.11959771350000015
+  }
+ },
+ "GRU_JNB_monthly": {
+  "static": {
+   "median": 0.890738,
+   "below1": 0.8985507246376812
+  },
+  "map2025": {
+   "median": 0.8500872488276885,
+   "below1": 0.9323671497584541
+  }
+ },
+ "cruise_points": {
+  "dRc_P05": -0.2595900848268319,
+  "dRc_P95": 0.13392571837604328,
+  "IEC_spread_static": 2.652191431727504,
+  "IEC_spread_shift": 2.619460904741377,
+  "JESD_spread_static": 1.4226378809588194,
+  "JESD_spread_shift": 1.416092860604595,
+  "IEC_median_static": 1.192396690851619,
+  "IEC_median_shift": 1.1922852213661046,
+  "note": "PARMA in A mode (US Standard Atmosphere) for both, so the comparison isolates the cutoff change"
+ }
+}

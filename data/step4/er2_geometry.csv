@@ -1,0 +1,21 @@
+setting,site,alt_km,W,Rc,g,PARMA_total,PARMA_gt10,measured,ratio_total
+"ours (Jun, measured Rc, free air)",ER2_19N,20.3,28.6,11.6,10,1.6932,0.413452,1.24,1.36548
+"ours (Jun, measured Rc, free air)",ER2_54N,20,28.6,0.8,10,12.023,2.84129,9.7,1.23948
+"ours (Jun, measured Rc, free air)",ER2_56N,16.2,28.6,0.7,10,11.8103,2.65784,9.5,1.24319
+"ours (Jun, measured Rc, free air)",ER2_38N_11.9km,11.9,28.6,4.3,10,4.39123,1.00451,3.4,1.29154
+"ours (Jun, measured Rc, free air)",ground_37N,0,28.6,2.7,0.15,0.0139723,0.00377891,0.0126,1.10892
+"geometry only (Jun, measured Rc, cabin g=-10.5)",ER2_19N,20.3,28.6,11.6,-10.5,1.43581,0.38407,1.24,1.15791
+"geometry only (Jun, measured Rc, cabin g=-10.5)",ER2_54N,20,28.6,0.8,-10.5,10.1841,2.63893,9.7,1.0499
+"geometry only (Jun, measured Rc, cabin g=-10.5)",ER2_56N,16.2,28.6,0.7,-10.5,9.99745,2.46884,9.5,1.05236
+"geometry only (Jun, measured Rc, cabin g=-10.5)",ER2_38N_11.9km,11.9,28.6,4.3,-10.5,3.72065,0.933557,3.4,1.09431
+"geometry only (Jun, measured Rc, cabin g=-10.5)",ground_37N,0,28.6,2.7,0.15,0.0139723,0.00377891,0.0126,1.10892
+"date+map only (Jul, map Rc, free air)",ER2_19N,20.3,32.8,11.4,10,1.72227,0.42044,1.24,1.38893
+"date+map only (Jul, map Rc, free air)",ER2_54N,20,32.8,0.92,10,11.7657,2.78262,9.7,1.21296
+"date+map only (Jul, map Rc, free air)",ER2_56N,16.2,32.8,0.82,10,11.5739,2.60633,9.5,1.2183
+"date+map only (Jul, map Rc, free air)",ER2_38N_11.9km,11.9,32.8,4.39,10,4.29026,0.981945,3.4,1.26184
+"date+map only (Jul, map Rc, free air)",ground_37N,0,32.8,3.01,0.15,0.0137163,0.00372199,0.0126,1.0886
+"developer (Jul, map Rc, cabin g=-10.5)",ER2_19N,20.3,32.8,11.4,-10.5,1.46045,0.390564,1.24,1.17778
+"developer (Jul, map Rc, cabin g=-10.5)",ER2_54N,20,32.8,0.92,-10.5,9.9664,2.58447,9.7,1.02746
+"developer (Jul, map Rc, cabin g=-10.5)",ER2_56N,16.2,32.8,0.82,-10.5,9.79751,2.42103,9.5,1.03132
+"developer (Jul, map Rc, cabin g=-10.5)",ER2_38N_11.9km,11.9,32.8,4.39,-10.5,3.63515,0.912585,3.4,1.06916
+"developer (Jul, map Rc, cabin g=-10.5)",ground_37N,0,32.8,3.01,0.15,0.0137163,0.00372199,0.0126,1.0886

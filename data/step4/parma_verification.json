@@ -1,0 +1,32 @@
+{
+  "samples": {
+    "Tokyo-Smin": {
+      "rows": 5461,
+      "values": 191135,
+      "neutron_max_rel_diff": 0.0,
+      "other_columns_differing": [
+        2
+      ],
+      "other_values_differing": 677,
+      "largest_differing_value": 3.806003e-05
+    },
+    "ERII-exp": {
+      "rows": 701,
+      "values": 24535,
+      "neutron_max_rel_diff": 0.0,
+      "other_columns_differing": [
+        2
+      ],
+      "other_values_differing": 43,
+      "largest_differing_value": 1.080413e-06
+    }
+  },
+  "integration": {
+    "n_conditions": 6,
+    "nint": [
+      4000,
+      16000
+    ],
+    "max_rel_diff": 9.027006093138644e-07
+  }
+}

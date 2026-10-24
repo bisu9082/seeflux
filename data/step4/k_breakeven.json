@@ -1,0 +1,182 @@
+{
+ "anchors": {
+  "envelope": [
+   0.8825800710644215,
+   1.37
+  ],
+  "inflight_total_ratios": [
+   1.365,
+   1.239,
+   1.243,
+   1.292
+  ],
+  "inflight_total_geomean": 1.2837616565447676,
+  "cruise_gt10": 1.3574792139651553,
+  "ground_total_goldhagen": 1.109,
+  "ground_gt10_jesd": 0.8825800710644215
+ },
+ "rows": [
+  {
+   "group": "flat 6000",
+   "finding": "peak n+p above 6000 somewhere on the route, FL370 (max over routes: ICN-JFK)",
+   "k_star": 1.238165,
+   "holds_for": "k < k*",
+   "vs_envelope": "decided inside the envelope",
+   "holds_at_inflight_geomean": false,
+   "holds_at_cruise_anchor": false
+  },
+  {
+   "group": "flat 6000",
+   "finding": "peak n+p above 6000 somewhere on the route, FL390 (max over routes: ICN-JFK)",
+   "k_star": 1.3929783333333334,
+   "holds_for": "k < k*",
+   "vs_envelope": "holds across the envelope",
+   "holds_at_inflight_geomean": true,
+   "holds_at_cruise_anchor": true
+  },
+  {
+   "group": "flat 6000",
+   "finding": "peak n+p above 6000 somewhere on the route, FL410 (max over routes: ICN-JFK)",
+   "k_star": 1.5555533333333333,
+   "holds_for": "k < k*",
+   "vs_envelope": "holds across the envelope",
+   "holds_at_inflight_geomean": true,
+   "holds_at_cruise_anchor": true
+  },
+  {
+   "group": "flat 6000",
+   "finding": "cruise-mean n+p above 6000, ICN-JFK FL370 2009",
+   "k_star": 1.1039927414733968,
+   "holds_for": "k < k*",
+   "vs_envelope": "decided inside the envelope",
+   "holds_at_inflight_geomean": false,
+   "holds_at_cruise_anchor": false
+  },
+  {
+   "group": "flat 6000",
+   "finding": "n+p above 6000 for at least half of the cruise, ICN-JFK FL370 2009",
+   "k_star": 1.238165,
+   "holds_for": "k < k*",
+   "vs_envelope": "decided inside the envelope",
+   "holds_at_inflight_geomean": false,
+   "holds_at_cruise_anchor": false
+  },
+  {
+   "group": "flat 6000",
+   "finding": "cruise-mean n+p above 6000, ICN-FRA FL370 2009",
+   "k_star": 0.9587082740673888,
+   "holds_for": "k < k*",
+   "vs_envelope": "decided inside the envelope",
+   "holds_at_inflight_geomean": false,
+   "holds_at_cruise_anchor": false
+  },
+  {
+   "group": "flat 6000",
+   "finding": "n+p above 6000 for at least half of the cruise, ICN-FRA FL370 2009",
+   "k_star": 1.0501141666666667,
+   "holds_for": "k < k*",
+   "vs_envelope": "decided inside the envelope",
+   "holds_at_inflight_geomean": false,
+   "holds_at_cruise_anchor": false
+  },
+  {
+   "group": "flat 6000",
+   "finding": "cruise-mean n+p above 6000, SYD-SCL FL370 2009",
+   "k_star": 0.9016195452729694,
+   "holds_for": "k < k*",
+   "vs_envelope": "decided inside the envelope",
+   "holds_at_inflight_geomean": false,
+   "holds_at_cruise_anchor": false
+  },
+  {
+   "group": "flat 6000",
+   "finding": "n+p above 6000 for at least half of the cruise, SYD-SCL FL370 2009",
+   "k_star": 0.998095,
+   "holds_for": "k < k*",
+   "vs_envelope": "decided inside the envelope",
+   "holds_at_inflight_geomean": false,
+   "holds_at_cruise_anchor": false
+  },
+  {
+   "group": "scaled IEC, GRU-JNB",
+   "finding": "below the flux in at least half of the months",
+   "k_star": 1.1226645770136672,
+   "holds_for": "k < k*",
+   "vs_envelope": "decided inside the envelope",
+   "holds_at_inflight_geomean": false,
+   "holds_at_cruise_anchor": false
+  },
+  {
+   "group": "scaled IEC, GRU-JNB",
+   "finding": "below the flux in at least one month",
+   "k_star": 1.189285489170961,
+   "holds_for": "k < k*",
+   "vs_envelope": "decided inside the envelope",
+   "holds_at_inflight_geomean": false,
+   "holds_at_cruise_anchor": false
+  },
+  {
+   "group": "median ratio",
+   "finding": "IEC scaled median below the flux",
+   "k_star": 0.8386074755147582,
+   "holds_for": "k < k*",
+   "vs_envelope": "fails across the envelope",
+   "holds_at_inflight_geomean": false,
+   "holds_at_cruise_anchor": false
+  },
+  {
+   "group": "median ratio",
+   "finding": "JESD89 median below the flux",
+   "k_star": 0.9297266138891859,
+   "holds_for": "k < k*",
+   "vs_envelope": "decided inside the envelope",
+   "holds_at_inflight_geomean": false,
+   "holds_at_cruise_anchor": false
+  },
+  {
+   "group": "median ratio",
+   "finding": "AN4589 ABB median below the flux",
+   "k_star": 1.1223961811592331,
+   "holds_for": "k < k*",
+   "vs_envelope": "decided inside the envelope",
+   "holds_at_inflight_geomean": false,
+   "holds_at_cruise_anchor": false
+  },
+  {
+   "group": "median ratio",
+   "finding": "AN4589 CoolCAD median below the flux",
+   "k_star": 1.9697059229057103,
+   "holds_for": "k < k*",
+   "vs_envelope": "holds across the envelope",
+   "holds_at_inflight_geomean": true,
+   "holds_at_cruise_anchor": true
+  },
+  {
+   "group": "bounding environment",
+   "finding": "FL370 value (7498) at or above 6000",
+   "k_star": 1.24969,
+   "holds_for": "k < k*",
+   "vs_envelope": "decided inside the envelope",
+   "holds_at_inflight_geomean": false,
+   "holds_at_cruise_anchor": false
+  },
+  {
+   "group": "bounding environment",
+   "finding": "FL410 value (9427) at or above 6000",
+   "k_star": 1.571185,
+   "holds_for": "k < k*",
+   "vs_envelope": "holds across the envelope",
+   "holds_at_inflight_geomean": true,
+   "holds_at_cruise_anchor": true
+  },
+  {
+   "group": "bounding environment",
+   "finding": "FL510 value (13795) at or above 6000",
+   "k_star": 2.2991333333333333,
+   "holds_for": "k < k*",
+   "vs_envelope": "holds across the envelope",
+   "holds_at_inflight_geomean": true,
+   "holds_at_cruise_anchor": true
+  }
+ ]
+}

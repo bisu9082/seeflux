@@ -1,0 +1,19 @@
+group,finding,k_star,holds_for,vs_envelope,holds_at_inflight_geomean,holds_at_cruise_anchor
+flat 6000,"peak n+p above 6000 somewhere on the route, FL370 (max over routes: ICN-JFK)",1.2382,k < k*,decided inside the envelope,False,False
+flat 6000,"peak n+p above 6000 somewhere on the route, FL390 (max over routes: ICN-JFK)",1.3930,k < k*,holds across the envelope,True,True
+flat 6000,"peak n+p above 6000 somewhere on the route, FL410 (max over routes: ICN-JFK)",1.5556,k < k*,holds across the envelope,True,True
+flat 6000,"cruise-mean n+p above 6000, ICN-JFK FL370 2009",1.1040,k < k*,decided inside the envelope,False,False
+flat 6000,"n+p above 6000 for at least half of the cruise, ICN-JFK FL370 2009",1.2382,k < k*,decided inside the envelope,False,False
+flat 6000,"cruise-mean n+p above 6000, ICN-FRA FL370 2009",0.9587,k < k*,decided inside the envelope,False,False
+flat 6000,"n+p above 6000 for at least half of the cruise, ICN-FRA FL370 2009",1.0501,k < k*,decided inside the envelope,False,False
+flat 6000,"cruise-mean n+p above 6000, SYD-SCL FL370 2009",0.9016,k < k*,decided inside the envelope,False,False
+flat 6000,"n+p above 6000 for at least half of the cruise, SYD-SCL FL370 2009",0.9981,k < k*,decided inside the envelope,False,False
+"scaled IEC, GRU-JNB",below the flux in at least half of the months,1.1227,k < k*,decided inside the envelope,False,False
+"scaled IEC, GRU-JNB",below the flux in at least one month,1.1893,k < k*,decided inside the envelope,False,False
+median ratio,IEC scaled median below the flux,0.8386,k < k*,fails across the envelope,False,False
+median ratio,JESD89 median below the flux,0.9297,k < k*,decided inside the envelope,False,False
+median ratio,AN4589 ABB median below the flux,1.1224,k < k*,decided inside the envelope,False,False
+median ratio,AN4589 CoolCAD median below the flux,1.9697,k < k*,holds across the envelope,True,True
+bounding environment,FL370 value (7498) at or above 6000,1.2497,k < k*,decided inside the envelope,False,False
+bounding environment,FL410 value (9427) at or above 6000,1.5712,k < k*,holds across the envelope,True,True
+bounding environment,FL510 value (13795) at or above 6000,2.2991,k < k*,holds across the envelope,True,True

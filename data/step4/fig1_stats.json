@@ -1,0 +1,13 @@
+{
+ "spread_30deg": 3.0223593964518765,
+ "spread_45deg": 2.5315261543974614,
+ "Rc_range_30deg": [
+  4.34,
+  14.0
+ ],
+ "PARMA_over_surrogate_range": [
+  0.9664086806385224,
+  1.056367701275373
+ ],
+ "PARMA_over_surrogate_max_Rc_below2": 1.056367701275373
+}
