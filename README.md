@@ -2,7 +2,7 @@
 
 Code and data for
 
-> S. Kim, M. Shin, J. Park and K. Kang, "Auditing the Boeing-Model Neutron Flux Procedure Referenced by IEC 62396-1 at Cruise Altitude: Cutoff Rigidity, Solar Phase and Implications for Upset Rates" (submitted).
+> M. Shin, J. Park and K. Kang, "Auditing the Boeing-Model Neutron Flux Procedure Referenced by IEC 62396-1 at Cruise Altitude: Cutoff Rigidity, Solar Phase and Implications for Upset Rates" (submitted).
 
 The analysis compares the simplified atmospheric neutron flux estimates used in avionics single-event-effect (SEE) analyses with the PARMA model, over 2009 to 2026, on 2000 random flight conditions and seven routes. The estimates are the Boeing-model curves referenced by IEC 62396-1, the JESD89 ground scaling and vendor closed-form factors. The key results are checked with CARI-7.
 
